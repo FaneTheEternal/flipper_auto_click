@@ -1,0 +1,23 @@
+cargo-features = ["different-binary-name"]
+
+[package]
+name = "flipper_auto_click"
+version = "0.1.0"
+edition = "2021"
+autobins = false
+autoexamples = false
+autotests = false
+autobenches = false
+
+[[bin]]
+name = "flipper_auto_click"
+filename = "flipper_auto_click.fap"
+bench = false
+test = false
+
+[dependencies]
+flipperzero = { version = "0.14.0", features = ["alloc"] }
+flipperzero-sys = { version = "0.14.0" }
+flipperzero-rt = { version = "0.14.0" }
+flipperzero-alloc = { version = "0.14.0" }
+ufmt = "0.2.0"
